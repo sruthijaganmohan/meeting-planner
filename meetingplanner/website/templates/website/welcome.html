@@ -11,8 +11,17 @@
         This is the demo application for the course
         <em>Django: Getting Started</em>
     </p>
-    <p>
-        There are currently {{meetings_no}} meetings in the database.
-    </p>
+
+    <h2>Meeting</h2>
+    <ul>
+        {% for meeting in meetings %}
+        <li>
+            <a href="{% url 'detail' meeting.id %}">{{meeting.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Rooms</h2>
+    <a href="{% url 'rooms' %}">Rooms list</a>
 </body>
 </html>

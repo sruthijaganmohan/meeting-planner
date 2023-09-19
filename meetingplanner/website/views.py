@@ -7,7 +7,7 @@ from meetings.models import Meetings
 
 def welcome(request):
     return render(request, "website/welcome.html", 
-                  {'meetings_no': Meetings.objects.count()})
+                  {'meetings': Meetings.objects.all()})
 
 
 def date(request):

@@ -4,6 +4,9 @@
 
 {% block content %}
     <h1>Welcome to the Meeting Planner</h1>
+    <h2>New Meeting</h2>
+    <a href="{% url 'new' %}">Create New Meeting</a>
+
     <h2>Meeting</h2>
     <ul>
         {% for meeting in meetings %}

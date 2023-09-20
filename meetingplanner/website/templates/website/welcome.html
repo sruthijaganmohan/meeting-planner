@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-</head>
-<body>
-    <h1>Welcome to the Meeting Planner</h1>
-    <p>
-        This is the demo application for the course
-        <em>Django: Getting Started</em>
-    </p>
+{% extends "base.html" %}
 
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Meeting Planner</h1>
     <h2>Meeting</h2>
     <ul>
         {% for meeting in meetings %}
@@ -23,5 +15,4 @@
 
     <h2>Rooms</h2>
     <a href="{% url 'rooms' %}">Rooms list</a>
-</body>
-</html>
+{% endblock %}
